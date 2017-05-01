@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <title>Aeroplane Chess - pixelnfinite</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" />
+    <!--[if lt IE 8]><script src="./json3.min.js"></script><![endif]-->
+    <script src="./jquery-1.11.2.min.js"></script>
+    <script src="./socket.io.js"></script>
+</head>
+<body>
+
+    <div id="login-box">
+            <input type="text" placeholder="Nickname" id="username-box" name="username-input"/>
+            <div id="color-section-box">
+                <div class="color-button red"></div>
+                <div class="color-button yellow"></div>
+                <div class="color-button blue"></div>
+                <div class="color-button green"></div>
+                <div class="color-button view-button">Observer</div>
+            </div>
+            <div class="btn" id="login-btn-next">Next</div>
+    </div>
+    <div id="chess-board">
+        
+        <span class="chess red" id="chess00" color="0" chess="0"><i class="fa fa-plane"></i></span>
+        <span class="chess red" id="chess01" color="0" chess="1"><i class="fa fa-plane"></i></span>
+        <span class="chess red" id="chess02" color="0" chess="2"><i class="fa fa-plane"></i></span>
+        <span class="chess red" id="chess03" color="0" chess="3"><i class="fa fa-plane"></i></span>
+        <span class="chess yellow" id="chess10" color="1" chess="0"><i class="fa fa-plane"></i></span>
+        <span class="chess yellow" id="chess11" color="1" chess="1"><i class="fa fa-plane"></i></span>
+        <span class="chess yellow" id="chess12" color="1" chess="2"><i class="fa fa-plane"></i></span>
+        <span class="chess yellow" id="chess13" color="1" chess="3"><i class="fa fa-plane"></i></span>
+        <span class="chess blue" id="chess20" color="2" chess="0"><i class="fa fa-plane"></i></span>
+        <span class="chess blue" id="chess21" color="2" chess="1"><i class="fa fa-plane"></i></span>
+        <span class="chess blue" id="chess22" color="2" chess="2"><i class="fa fa-plane"></i></span>
+        <span class="chess blue" id="chess23" color="2" chess="3"><i class="fa fa-plane"></i></span>
+        <span class="chess green" id="chess30" color="3" chess="0"><i class="fa fa-plane"></i></span>
+        <span class="chess green" id="chess31" color="3" chess="1"><i class="fa fa-plane"></i></span>
+        <span class="chess green" id="chess32" color="3" chess="2"><i class="fa fa-plane"></i></span>
+        <span class="chess green" id="chess33" color="3" chess="3"><i class="fa fa-plane"></i></span>
+        <img src="./chessboard.jpg">
+    </div>
+    <div id="panel">
+        <div id="turn">
+            
+        </div>
+        <div id="dice">
+            <div id="number"></div>
+            <div id="shake">THROW</div>
+        </div>
+        <div id="online-users">
+
+        </div>
+        <div id="test1" class="test">PLAYER 0 STEP 1</div>
+        <div id="test2" class="test">PLAYER 1 STEP 1</div>
+        <div id="test4" class="test">PLAYER 3 STEP 1</div>
+        <div id="control-panel">
+        </div>
+
+        <div id="chat-box">
+            <div class="btn" id="send-button">Send</div>
+            <input type="text" id="chat-input" name="chat-input"/>
+        </div>
+    </div>
+
+    <div class="overlay" id="reset-overlay">
+        <div class="overlay-box">
+            Reset the game?
+            <div class="btn" id="reset-yes">Yes</div>
+            <div class="btn" id="reset-no">No</div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./client.js"></script>
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-50840706-1', 'auto');
+       ga('send', 'pageview');
+
+     </script>
+</body>
+</html>
